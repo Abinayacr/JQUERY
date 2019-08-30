@@ -1,0 +1,2 @@
+<h2>jquery and ajax is fun</h2>
+<p id="p1">paragraph update through ajax</p>

@@ -1,0 +1,76 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style type="text/css">
+#panel, #flip, p{
+    padding: 20px;
+    font: 20px sans-serif;
+    background: khaki;
+}
+</style>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $(".beg").hide();
+    $(".adv").hide();
+});
+
+$(document).ready(function(){
+    $(".begbtn").click(function(e){
+        $(".beg").fadeIn(2000);
+        $(".adv").hide();
+        
+    });
+});
+    $(document).ready(function(){
+        $(".advbtn").click(function (e){
+            $(".adv").fadeIn(2000);
+            $(".beg").hide();
+        });
+    });
+
+    $(document).ready(function(){
+        $("#flip").click(function(){
+            $("#panel").slideToggle("slow");
+        });
+    });
+</script>
+</head>
+
+<body>
+<h1>QUINNOX TRAINING</h1>
+<h2>Select Courses</h2>
+ <tr>
+    <td>BEGINNER</td>
+    <td>ADVANCE</td>
+ </tr>
+
+<tr>
+    <td>
+    <ul class="beg">
+        <li>CORE JAVA</li>
+        <li>JAVASCRIPT</li>
+    </ul>
+    </td>
+    <td>
+    <ul class="adv">
+         <li>SERVER</li>
+         <li>JSP</li>
+    </ul>
+    </td>
+</tr>
+<tr>
+<td>
+    <button class="begbtn">BEGINNER</button>
+</td>
+<td>
+    <button class="advbtn">ADVANCE</button>
+</td>
+</tr>
+<br><br><br>
+<div id="flip">click here</div>
+<div id="panel">send a mail</div>
+
+</body>
+</html>
